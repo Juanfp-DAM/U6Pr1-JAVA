@@ -1,11 +1,16 @@
 package es.iesmz;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EmpleadoBRTest {
 
+    @BeforeEach
+    public void imprimir(){
+        System.out.println("EXECUTE PROVA");
+    }
 
     @Test
     public  void testCalculaSalarioNeto1() {
