@@ -97,7 +97,7 @@ public class EmpleadoBR {
     }
 
 
-    public float calculaSalarioNeto(float salarioBruto){
+    public static float calculaSalarioNeto(float salarioBruto){
         float salarioNeto=0, retencion;
         if(salarioBruto>0 && salarioBruto<1000){
             salarioNeto=salarioBruto;

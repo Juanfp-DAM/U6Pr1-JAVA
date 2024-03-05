@@ -6,6 +6,42 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class EmpleadoBRTest {
 
+
+    @Test
+    public  void testCalculaSalarioNeto1() {
+        float resultadoReal= EmpleadoBR.calculaSalarioNeto(2000);
+        float resultadoEsperado=1640.0f;
+        assertEquals(resultadoEsperado, resultadoReal, 0.01);
+    }
+
+
+    @Test
+    public  void testCalculaSalarioNeto2() {
+        float resultadoReal= EmpleadoBR.calculaSalarioNeto(1500);
+        float resultadoEsperado=1230.0f;
+        assertEquals(resultadoEsperado, resultadoReal, 0.01);
+    }
+
+    @Test
+    public  void testCalculaSalarioNeto3() {
+        float resultadoReal= EmpleadoBR.calculaSalarioNeto(1499.99f);
+        float resultadoEsperado=1259.9916f;
+        assertEquals(resultadoEsperado, resultadoReal, 0.01);
+    }
+    @Test
+    public  void testCalculaSalarioNeto4() {
+        float resultadoReal= EmpleadoBR.calculaSalarioNeto(1250);
+        float resultadoEsperado=1050;
+        assertEquals(resultadoEsperado, resultadoReal, 0.01);
+    }
+
+    @Test
+    public  void testCalculaSalarioNeto5() {
+        float resultadoReal= EmpleadoBR.calculaSalarioNeto(1000);
+        float resultadoEsperado=840;
+        assertEquals(resultadoEsperado, resultadoReal, 0.01);
+    }
+
     @Test
     public  void testCalculaSalarioBruto1() {
         float resultadoReal= EmpleadoBR.calculaSalarioBruto(TipoEmpleado.vendedor, 2000.0f, 8.0f);
